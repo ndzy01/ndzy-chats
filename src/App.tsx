@@ -94,7 +94,7 @@ const App = () => {
 
         <Button
           onClick={() => {
-            if (s.user && s.room) {
+            if (s.user && room) {
               socket.emit('createRoom', { roomName: room, userId: s.user.id });
               getAllRooms();
               setRoom('');
